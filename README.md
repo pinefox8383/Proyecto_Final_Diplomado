@@ -24,6 +24,11 @@ La Base de datos elegida (archivo CSV) cuenta con 1275 registros y 23 columnas d
 - Sin Nulos
 - Sin Datos Erroneos
 
+## 3.- Análisis Exploratorio de Datos (EDA)
+![image](https://github.com/user-attachments/assets/9e207677-bc89-4241-9312-a36cd27ce994)
+
+![image](https://github.com/user-attachments/assets/e7559b81-7634-4ae5-ae72-9cf5319c363e)
+
 
 
 
