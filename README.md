@@ -19,3 +19,12 @@ Además de esto el conocimiento adquirido puede ayudar de alguna manera a la tom
 La Base de datos elegida (archivo CSV) cuenta con 1275 registros y 23 columnas descriptivas de los equipos.
 ![image](https://github.com/user-attachments/assets/8fefc9bd-d767-4869-8103-1cc824046d61)
 
+### •	Limpieza de los datos
+- Datos confiables
+- Sin Nulos
+- Sin Datos Erroneos
+
+
+
+
+
