@@ -40,8 +40,8 @@ Resumen_precios_Company_INTEL<-
   group_by(Company) %>% 
   summarise( Precio.mediana=median(Price_euros),
              Precio.promedio=mean(Price_euros),  
-             Precio.máximo=max(Price_euros),              
-             Precio.mínimo=min(Price_euros),
+             Precio.maximo=max(Price_euros),              
+             Precio.minimo=min(Price_euros),
              Recuento=n()
   ) %>%
   ungroup()
@@ -59,8 +59,8 @@ Resumen_precios_Company_AMD<-
   group_by(Company) %>% 
   summarise( Precio.mediana=median(Price_euros),
              Precio.promedio=mean(Price_euros),  
-             Precio.máximo=max(Price_euros),              
-             Precio.mínimo=min(Price_euros),
+             Precio.maximo=max(Price_euros),              
+             Precio.minimo=min(Price_euros),
              Precio.moda=mode(Price_euros),
              Recuento=n()
   ) %>%
@@ -79,8 +79,8 @@ Resumen_precios_Company_cpu_model<-
   group_by(Company,CPU_model) %>% 
   summarise( Precio.mediana=median(Price_euros),
              Precio.promedio=mean(Price_euros),  
-             Precio.máximo=max(Price_euros),              
-             Precio.mínimo=min(Price_euros),
+             Precio.maximo=max(Price_euros),              
+             Precio.minimo=min(Price_euros),
              Recuento=n()
   ) %>%
   ungroup()
