@@ -7,3 +7,5 @@
 Fuente de Datos elegida: Dataset archivo CSV (laptop_prices.csv)
 
 URL :  https://www.kaggle.com/datasets/owm4096/laptop-prices?select=laptop_prices.csv
+
+### •	Justificación
