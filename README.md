@@ -9,3 +9,5 @@ Fuente de Datos elegida: Dataset archivo CSV (laptop_prices.csv)
 URL :  https://www.kaggle.com/datasets/owm4096/laptop-prices?select=laptop_prices.csv
 
 ### •	Justificación
+Revisando opciones entre distintos sitios de internet y diversos temas, se optó por elegir un dataset de interés general, ya que todas las profesiones y oficios estamos relacionados con el uso de equipos de cómputo. En este caso se trata de una lista de precios de laptops, tomando en cuenta diversos datos como la compañía a la que pertenecen, marca de CPU, modelo de CPU, Sistema Operativo, características gráficas, tamaño de monitor entre otras.
+Además de esto el conocimiento adquirido puede ayudar de alguna manera a la toma de decisiones en cuestión de compra
