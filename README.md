@@ -29,6 +29,9 @@ La Base de datos elegida (archivo CSV) cuenta con 1275 registros y 23 columnas d
 
 ![image](https://github.com/user-attachments/assets/e7559b81-7634-4ae5-ae72-9cf5319c363e)
 
+![image](https://github.com/user-attachments/assets/d6fdbfcb-2372-4944-b87f-7e1674e10a4f)
+
+
 
 
 
