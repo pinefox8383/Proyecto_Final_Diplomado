@@ -61,7 +61,6 @@ Resumen_precios_Company_AMD<-
              Precio.promedio=mean(Price_euros),  
              Precio.maximo=max(Price_euros),              
              Precio.minimo=min(Price_euros),
-             Precio.moda=mode(Price_euros),
              Recuento=n()
   ) %>%
   ungroup()
