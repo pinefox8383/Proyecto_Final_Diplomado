@@ -17,9 +17,9 @@ str(df) #visualizando estructura de datos
 #.......................................................................................
 #3.- Análisis Exploratorio de Datos ....................................................
 #.......................................................................................
-#visualizando estadísticas generales
+#visualizando estadísticas generales del dataset
 summary(df)
-
+  
 #histograma de Precios porCompañías
 df %>%drop_na() %>%   ggplot(aes(x=Price_euros,fill=Company)) + geom_histogram()
 
@@ -28,6 +28,8 @@ df %>%drop_na() %>%   ggplot(aes(x=Price_euros,fill=OS)) + geom_histogram()
 
 #histograma de Precios por Compañía CPU
 df %>%drop_na() %>%   ggplot(aes(x=Price_euros,fill=CPU_company)) + geom_histogram()
+
+
 
 #Estadísticas de laptops INTEL por Compañía
 Resumen_precios_Company_INTEL<-
@@ -38,8 +40,8 @@ Resumen_precios_Company_INTEL<-
   group_by(Company) %>% 
   summarise( Precio.mediana=median(Price_euros),
              Precio.promedio=mean(Price_euros),  
-             Precio.maxima=max(Price_euros),              
-             Precio.minima=min(Price_euros),
+             Precio.máximo=max(Price_euros),              
+             Precio.mínimo=min(Price_euros),
              Recuento=n()
   ) %>%
   ungroup()
@@ -57,8 +59,9 @@ Resumen_precios_Company_AMD<-
   group_by(Company) %>% 
   summarise( Precio.mediana=median(Price_euros),
              Precio.promedio=mean(Price_euros),  
-             Precio.maxima=max(Price_euros),              
-             Precio.minima=min(Price_euros),
+             Precio.máximo=max(Price_euros),              
+             Precio.mínimo=min(Price_euros),
+             Precio.moda=mode(Price_euros),
              Recuento=n()
   ) %>%
   ungroup()
@@ -76,8 +79,8 @@ Resumen_precios_Company_cpu_model<-
   group_by(Company,CPU_model) %>% 
   summarise( Precio.mediana=median(Price_euros),
              Precio.promedio=mean(Price_euros),  
-             Precio.maxima=max(Price_euros),              
-             Precio.minima=min(Price_euros),
+             Precio.máximo=max(Price_euros),              
+             Precio.mínimo=min(Price_euros),
              Recuento=n()
   ) %>%
   ungroup()
@@ -85,7 +88,6 @@ view(Resumen_precios_Company_cpu_model)#visualizando Resumen
 write.csv(Resumen_precios_Company_cpu_model,"Resumen_precios_Company_cpu_model.csv") #EXportando Resumen a archivo csv
 Resumen_precios_Company_cpu_model %>%drop_na() %>%   ggplot(aes(x=Recuento,fill=CPU_model )) + geom_histogram()
 Resumen_precios_Company_cpu_model %>%drop_na() %>%   ggplot(aes(x=Recuento,fill=Company )) + geom_histogram()
-
 
 
 
