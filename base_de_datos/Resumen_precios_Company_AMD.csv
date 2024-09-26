@@ -1,4 +1,4 @@
-"","Company","Precio.mediana","Precio.promedio","Precio.máximo","Precio.mínimo","Precio.moda","Recuento"
+"","Company","Precio.mediana","Precio.promedio","Precio.maximo","Precio.minimo","Precio.moda","Recuento"
 "1","Acer",437.5,462.4,659,387,"numeric",10
 "2","Asus",575,883.09,2199,199,"numeric",11
 "3","HP",488.99,476.524782608696,655.01,258,"numeric",23
