@@ -30,6 +30,29 @@ df %>%drop_na() %>%   ggplot(aes(x=Price_euros,fill=OS)) + geom_histogram()
 df %>%drop_na() %>%   ggplot(aes(x=Price_euros,fill=CPU_company)) + geom_histogram()
 
 
+#Gráfico de Barras  recuento de Laptops por CPU Company fill CPU
+df %>% 
+  #filter(CPU_company=="AMD") %>%   
+  drop_na() %>% #quitando nulos  
+  ggplot(aes(x=CPU_company,fill=CPU_company)) + 
+  geom_bar()
+
+#Gráfico de Barras  recuento de Laptops por CPU Company  fill OS
+df %>% 
+  #filter(CPU_company=="AMD") %>%   
+  drop_na() %>% #quitando nulos  
+  ggplot(aes(x=CPU_company,fill=OS)) + 
+  geom_bar()
+
+
+#Gráfico de Barras  recuento de Laptops por Sitema operativo fill cpu
+df %>% 
+  #filter(CPU_company=="AMD") %>%   
+  drop_na() %>% #quitando nulos  
+  ggplot(aes(x=OS,fill=CPU_company)) + 
+  geom_bar()
+
+
 
 #Estadísticas de laptops INTEL por Compañía
 Resumen_precios_Company_INTEL<-
@@ -69,6 +92,24 @@ Resumen_precios_Company_AMD %>%drop_na() %>%   ggplot(aes(x=Recuento,fill=Compan
 write.csv(Resumen_precios_Company_AMD,"Resumen_precios_Company_AMD.csv") #EXportando Resumen a archivo csv
 
 
+#Estadísticas de laptops Por Modelo de CPU
+Resumen_precios_cpu_model<-
+  df %>% 
+  select(CPU_model,Price_euros) %>% 
+  drop_na() %>% #quitando nulos
+  group_by(CPU_model) %>% 
+  summarise( Precio.mediana=median(Price_euros),
+             Precio.promedio=mean(Price_euros),  
+             Precio.maximo=max(Price_euros),              
+             Precio.minimo=min(Price_euros),
+             Recuento=n()
+  ) %>%
+  ungroup()
+view(Resumen_precios_cpu_model)#visualizando Resumen 
+write.csv(Resumen_precios_cpu_model,"Resumen_precios_cpu_model.csv") #EXportando Resumen a archivo csv
+Resumen_precios_cpu_model %>%drop_na() %>%   ggplot(aes(x=Recuento,fill=CPU_model )) + geom_histogram()
+
+
 #Estadísticas de laptops Por Compañía y Modelo de CPU
 Resumen_precios_Company_cpu_model<-
   df %>% 
@@ -91,27 +132,6 @@ Resumen_precios_Company_cpu_model %>%drop_na() %>%   ggplot(aes(x=Recuento,fill=
 
 
 
-#Gráfico de Barras  recuento de Laptops por CPU Company fill CPU
-df %>% 
-  #filter(CPU_company=="AMD") %>%   
-  drop_na() %>% #quitando nulos  
-  ggplot(aes(x=CPU_company,fill=CPU_company)) + 
-  geom_bar()
-
-#Gráfico de Barras  recuento de Laptops por CPU Company  fill OS
-df %>% 
-  #filter(CPU_company=="AMD") %>%   
-  drop_na() %>% #quitando nulos  
-  ggplot(aes(x=CPU_company,fill=OS)) + 
-  geom_bar()
-
-
-#Gráfico de Barras  recuento de Laptops por Sitema operativo fill cpu
-df %>% 
-  #filter(CPU_company=="AMD") %>%   
-  drop_na() %>% #quitando nulos  
-  ggplot(aes(x=OS,fill=CPU_company)) + 
-  geom_bar()
 
 
 
