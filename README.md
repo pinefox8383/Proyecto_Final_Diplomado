@@ -39,7 +39,7 @@ La Base de datos elegida (archivo CSV) cuenta con 1275 registros y 23 columnas d
 
 
 ## 4.- Visualización de Datos
-Tableau Public:  https://public.tableau.com/app/profile/......
+Power BI:  Precios de Laptops.pbix
 
 ## 5.- Interpretación y Conclusiones
 
