@@ -39,7 +39,10 @@ La Base de datos elegida (archivo CSV) cuenta con 1275 registros y 23 columnas d
 
 
 ## 4.- Visualización de Datos
-Power BI:  Precios de Laptops.pbix
+Software: Power BI
+Archivo:  Precios de Laptops.pbix
+URL: https://app.powerbi.com/groups/me/reports/1e304cd5-d99e-4a67-81e2-6605b2841767/9263c42f80938c21347c?experience=power-bi
+
 
 ## 5.- Interpretación y Conclusiones
 
